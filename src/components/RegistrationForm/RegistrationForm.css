@@ -1,0 +1,54 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-box {
+  padding: 10px;
+  border: 1px solid #333;
+  box-shadow: 1px 1px 2px #555;
+  margin-top: 15px;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.regular-button {
+  width: 50%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 0px solid #333;
+  box-shadow: 2px 2px 3px #555;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #3399FF;
+  color: #fff;
+}
+
+.registration-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-footer div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  background-color: transparent;
+}
+
+.registration-footer a {
+  margin: 20px 0px 50px 0px;
+  color: #333;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-button {
+  margin-top: 25px;
+}

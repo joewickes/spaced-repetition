@@ -47,41 +47,42 @@ class RegistrationForm extends Component {
           {error && <p>{error}</p>}
         </div>
         <div>
-          <Label htmlFor='registration-name-input'>
-            Enter your name<Required />
-          </Label>
           <Input
+            className='input-box'
             ref={this.firstInput}
             id='registration-name-input'
             name='name'
+            placeholder='Enter your name'
             required
           />
         </div>
         <div>
-          <Label htmlFor='registration-username-input'>
-            Choose a username<Required />
-          </Label>
           <Input
+            className='input-box'
             id='registration-username-input'
             name='username'
+            placeholder='Choose a username'
             required
           />
         </div>
         <div>
-          <Label htmlFor='registration-password-input'>
-            Choose a password<Required />
-          </Label>
           <Input
+            className='input-box'
             id='registration-password-input'
             name='password'
             type='password'
+            placeholder='Choose a password'
             required
           />
         </div>
-        <footer>
-          <Button type='submit'>
-            Sign up
-          </Button>
+        <footer className="registration-footer">
+          <div>
+            <Button 
+              className="regular-button"
+              type='submit'>
+                Sign up
+            </Button>
+          </div>
           {' '}
           <Link to='/login'>Already have an account?</Link>
         </footer>
