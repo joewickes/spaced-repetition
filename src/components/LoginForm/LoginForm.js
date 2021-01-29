@@ -4,6 +4,9 @@ import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
 
+// Styling
+import './LoginForm.css';
+
 class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => { }
@@ -66,7 +69,7 @@ class LoginForm extends Component {
             id='login-password-input'
             name='password'
             type='password'
-            placeholder='password'
+            placeholder='Password'
             required
           />
         </div>

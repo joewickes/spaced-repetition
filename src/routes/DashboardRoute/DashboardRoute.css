@@ -1,0 +1,77 @@
+/* Entire Dashboard Section */
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Language Heading */
+.dashboard-section div h2 {
+  font-size: 32px;;
+}
+
+/* Start Practicing Button */
+
+.start-practicing-button { 
+  margin: 15px 0px;
+  background-color: #92FF1E;
+  width: 40%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 0px solid #333;
+  box-shadow: 2px 2px 3px #555;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+}
+
+.start-practicing-button:hover {
+  background-color: #BCFF75
+}
+
+/* List of Words To Practice */
+
+
+.dashboard-section div ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  width: 60%
+}
+
+.dashboard-section div ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  border-radius: 3px;
+  background-color: #1e90ff;
+  color: #fff;
+  box-shadow: 2px 2px 3px #555;
+  text-align: center;
+}
+
+.dashboard-section div ul li:hover {
+  background-color: #75BBFF;
+}
+
+.dashboard-section div ul li h4 {
+  margin: 0px;
+  padding: 15px 15px 0px 15px;
+}
+
+.dashboard-section div ul li p {
+  margin: 0px;
+  padding: 10px 15px 15px 15px;
+}
+
+@media all and (min-width: 481px) {
+  .dashboard-section div ul  {
+    width: 50%;
+  }
+}

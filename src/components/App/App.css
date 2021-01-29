@@ -1,0 +1,57 @@
+main {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-section h2 {
+  font-size: 32px;
+}
+
+.form-section div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form-section div p {
+  padding-top: 10px;
+}
+
+.input-box {
+  padding: 10px;
+  border: 1px solid #333;
+  box-shadow: 1px 1px 2px #555;
+  margin-top: 15px;
+  border-radius: 3px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.regular-button {
+  width: 40%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 0px solid #333;
+  box-shadow: 2px 2px 3px #555;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #1e90ff;
+  font-size: 15px;
+}
+
+@media all and (min-width: 481px) {
+  .regular-button {
+    width: 30%;
+  }
+}

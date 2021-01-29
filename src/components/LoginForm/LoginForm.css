@@ -1,0 +1,17 @@
+.LoginForm {
+  width: 100%;
+}
+
+.LoginForm div {
+  width: 70%;
+}
+
+.login-button {
+  margin-top: 25px;
+}
+
+@media all and (min-width: 481px) {
+  .LoginForm div {
+    width: 60%;
+  }
+}
