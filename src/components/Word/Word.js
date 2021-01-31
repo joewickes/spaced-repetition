@@ -6,6 +6,7 @@ class Word extends React.Component {
       <li>
         <h4>{this.props.original}</h4>
         <p>Correct answer count: <b>{this.props.correct_count}</b></p>
+        <p>Incorrect answer count: <b>{this.props.incorrect_count}</b></p>
       </li>
     )
   }

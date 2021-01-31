@@ -18,7 +18,7 @@ describe(`User story: Register an account`, function() {
 
     cy.get('main section').within($section => {
       cy.get('h2')
-        .should('have.text', 'Sign up')
+        .should('have.text', 'Sign Up')
     })
   })
 
@@ -39,7 +39,7 @@ describe(`User story: Register an account`, function() {
         .and('have.attr', 'required', 'required')
 
       cy.get('button[type=submit]')
-        .should('have.text', 'Sign up')
+        .should('have.text', 'Sign Up')
     })
   })
 

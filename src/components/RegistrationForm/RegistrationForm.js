@@ -81,7 +81,7 @@ class RegistrationForm extends Component {
             <Button 
               className="regular-button"
               type='submit'>
-                Sign up
+                Sign Up
             </Button>
           </div>
           {' '}

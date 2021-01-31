@@ -1,4 +1,6 @@
+// Dependencies
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Style
 import './DashboardRoute.css';
@@ -21,7 +23,8 @@ class DashboardRoute extends Component {
       .then((languageAndWords) => {
         this.setState({
           language: languageAndWords.language.name,
-          words: languageAndWords.words
+          words: languageAndWords.words,
+          totalScore: languageAndWords.language.total_score,
         })
       })
     ;
@@ -33,16 +36,14 @@ class DashboardRoute extends Component {
 
       <section className='dashboard-section'>
         <div>
-          <h2>French</h2>
+          <h2>{this.state.language}</h2>
         </div>
         <div>
-          <p>Total correct answers: <b>{this.state.words.reduce((acc, word) => {
-            return acc + word.correct_count;
-          }, 0)}</b></p>
+          <p>Total correct answers: <b>{this.state.totalScore}</b></p>
         </div>
         <div>
           {/* href (navlink /learn) */}
-          <button className="start-practicing-button">Start<br />Practicing</button>
+          <NavLink to='/learn'><button className="start-practicing-button">Start <br />Practicing</button></NavLink>
         </div>
         <div>
           <h3>Words to practice</h3>
@@ -50,7 +51,7 @@ class DashboardRoute extends Component {
         <div>
           <ul>
             {this.state.words.map(word => {
-              return <Word key={word.id} original={word.original} correct_count={word.correct_count} />
+              return <Word key={word.id} original={word.original} correct_count={word.correct_count} incorrect_count={word.incorrect_count} />
             })}
           </ul>
         </div>

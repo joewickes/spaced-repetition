@@ -14,7 +14,14 @@
 
 /* Language Heading */
 .dashboard-section div h2 {
-  font-size: 32px;;
+  font-size: 32px;
+}
+
+.dashboard-section div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Start Practicing Button */
@@ -47,7 +54,7 @@
 
 .dashboard-section div ul li {
   margin: 0px 0px 15px 0px;
-  padding: 0px;
+  padding: 0px 0px 15px 0px;
   list-style-type: none;
   border-radius: 3px;
   background-color: #1e90ff;
@@ -62,12 +69,12 @@
 
 .dashboard-section div ul li h4 {
   margin: 0px;
-  padding: 15px 15px 0px 15px;
+  padding: 15px 15px 10px 15px;
 }
 
 .dashboard-section div ul li p {
   margin: 0px;
-  padding: 10px 15px 15px 15px;
+  padding: 5px 15px 0px 15px;
 }
 
 @media all and (min-width: 481px) {
