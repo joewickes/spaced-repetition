@@ -46,7 +46,7 @@
 }
 
 .dashboard-section div ul li {
-  margin: 0px;
+  margin: 0px 0px 15px 0px;
   padding: 0px;
   list-style-type: none;
   border-radius: 3px;

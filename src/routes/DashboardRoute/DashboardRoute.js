@@ -1,10 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 // Style
 import './DashboardRoute.css';
 
+// Component
+import Word from './../../components/Word/Word';
+
+// API Service
+import LanguageService from './../../services/language-service';
+
 class DashboardRoute extends Component {
+
+  state = {
+    language: '',
+    words: [],
+  }
+
+  componentDidMount() {
+    LanguageService.fetchLanguageAndWords()
+      .then((languageAndWords) => {
+        this.setState({
+          language: languageAndWords.language.name,
+          words: languageAndWords.words
+        })
+      })
+    ;
+  }
+
   render() {
+    console.log(this.state)
     return (
 
       <section className='dashboard-section'>
@@ -12,7 +36,9 @@ class DashboardRoute extends Component {
           <h2>French</h2>
         </div>
         <div>
-          <p>Total correct answers: <b>{1}</b></p>
+          <p>Total correct answers: <b>{this.state.words.reduce((acc, word) => {
+            return acc + word.correct_count;
+          }, 0)}</b></p>
         </div>
         <div>
           {/* href (navlink /learn) */}
@@ -23,10 +49,9 @@ class DashboardRoute extends Component {
         </div>
         <div>
           <ul>
-            <li>
-              <h4>Bonjour</h4>
-              <p>Correct answer count: <b>{1}</b></p>
-            </li>
+            {this.state.words.map(word => {
+              return <Word key={word.id} original={word.original} correct_count={word.correct_count} />
+            })}
           </ul>
         </div>
       </section>
