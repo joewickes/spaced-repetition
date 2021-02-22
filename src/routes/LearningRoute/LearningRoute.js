@@ -42,29 +42,34 @@ class LearningRoute extends Component {
 
       GuessService.postGuess(this.state.guess.toLowerCase())
         .then(response => {
-          console.log('guess response', response);
           this.setState({
             isCorrect: response.isCorrect,
             translation: response.answer,
             totalScore: response.totalScore,
             correctCount: response.wordCorrectCount,
             incorrectCount: response.wordIncorrectCount,
+            nextWord: response.nextWord,
           });
         });
     }
     const handleTryAnother = (e) => {
       e.preventDefault();
-      this.setState({isCorrect: null})
+      this.setState({
+        word: this.state.nextWord,
+        isCorrect: null
+      })
 
-      HeadService.fetchLearnWord()
-      .then(response => {
-        this.setState({
-          word: response.nextWord,
-          totalScore: response.totalScore,
-          correctCount: response.wordCorrectCount,
-          incorrectCount: response.wordIncorrectCount
-        })
-      }) 
+      // HeadService.fetchLearnWord()
+      // .then(response => {
+      //   console.log(response)
+      //   console.log(this.state);
+      //   this.setState({
+      //     word: response.nextWord,
+      //     totalScore: response.totalScore,
+      //     correctCount: response.wordCorrectCount,
+      //     incorrectCount: response.wordIncorrectCount
+      //   })
+      // }) 
     }
 
     const guessPrompt = (

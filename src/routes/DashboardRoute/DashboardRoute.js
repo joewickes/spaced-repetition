@@ -31,7 +31,6 @@ class DashboardRoute extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
 
       <section className='dashboard-section'>
