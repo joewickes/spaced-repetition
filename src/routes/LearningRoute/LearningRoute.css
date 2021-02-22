@@ -1,0 +1,68 @@
+.LearningRoute {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.LearningRoute p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.LearningRoute span {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.LearningRoute form {
+  margin-top: 35px;
+}
+
+.LearningRoute form div {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.guessPrompt {
+  width: 80%
+}
+
+.resultsPrompt {
+  width: 80%;
+}
+
+.DisplayScore {
+  margin-top: 20px;
+}
+
+.results-button-container {
+  margin-top: 20px;
+}
+
+.total-score {
+  margin-top: 20px;
+}
+
+.LearningRoute form div button {
+  width: 100%;
+}
+
+.correct-count {
+  margin-top: 40px;
+}
+
+.incorrect-count {
+  margin-top: 10px;
+}
+
+@media all and (min-width: 800px) {
+  .guessPrompt {
+    width: 60%
+  }
+  
+  .resultsPrompt {
+    width: 60%;
+  }
+}
