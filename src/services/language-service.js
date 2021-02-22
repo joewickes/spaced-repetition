@@ -3,7 +3,7 @@ import TokenService from './token-service';
 const LanguageService = {
   fetchLanguageAndWords: async () => {
     try {
-      const fetchedResponse = await fetch('http://localhost:8000/api/language', {
+      const fetchedResponse = await fetch('https://immense-mesa-24411.herokuapp.com/api/language', {
         method: 'GET',
         headers: {
         'authorization': `Bearer ${TokenService.getAuthToken()}`,

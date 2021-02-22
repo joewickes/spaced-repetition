@@ -3,7 +3,7 @@ import TokenService from './token-service';
 const GuessService = {
   postGuess: async (guess) => {
     try {
-      const fetchedResponse = await fetch('http://localhost:8000/api/language/guess', {
+      const fetchedResponse = await fetch('https://immense-mesa-24411.herokuapp.com/api/language/guess', {
         method: 'POST',
         headers: {
         'authorization': `Bearer ${TokenService.getAuthToken()}`,
