@@ -4,13 +4,13 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 class RegistrationRoute extends Component {
   static defaultProps = {
     history: {
-      push: () => {},
+      push: () => { },
     },
   }
 
   handleRegistrationSuccess = () => {
     const { history } = this.props
-    history.push('/')
+    history.push('/login')
   }
 
   render() {

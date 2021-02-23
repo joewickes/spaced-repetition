@@ -20,9 +20,10 @@ class RegistrationForm extends Component {
     AuthApiService.postUser({
       name: name.value,
       username: username.value,
-      password: password.value,
+      password: password.value, 
     })
       .then(user => {
+        console.log(user.authToken);
         name.value = ''
         username.value = ''
         password.value = ''
@@ -45,7 +46,7 @@ class RegistrationForm extends Component {
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
-          {error && <p style={{color: "red"}}>{error}</p>}
+          {error && <p style={{color: 'red'}}>{error}</p>}
         </div>
         <div>
           <Input

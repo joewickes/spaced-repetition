@@ -80,7 +80,7 @@ class LearningRoute extends Component {
           <div className="correct-count">
             <p>You have answered this word correctly {this.state.correctCount} times.</p>
           </div>
-          <div class="incorrect-count">
+          <div className="incorrect-count">
             <p>You have answered this word incorrectly {this.state.incorrectCount} times.</p>
           </div>
         </div>
