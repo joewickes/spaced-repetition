@@ -1,47 +1,61 @@
-# Spaced Repetition Capstone
+# Spaced Repetition API
 
-## Setup
+## Live Link: https://spaced-repetition-bice.vercel.app/
 
-To setup the application
+## Back End Repo: https://github.com/joewickes/spaced-repetition-api/tree/main
 
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
+## Table of Contents
+- [Summary](##-summary)
+- [How To Use It](##-how-to-use-it)
+- [Technologies Used](##-technologies-used)
 
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
+## Summary
+Spaced repetition is an app that helps users learn new words in a foreign language with the spaced repetition technique.
 
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
+As a user I can
+- While Logged Out
+  - Get automatically redirected to the Sign Up page
+  - Click on either Sign Up or Log In and get redirected to either page
+- While Logged In
+  - I can see a list of my words
+  - I can start learning
+  - I can guess the answer for each word
+  - I can see a response for my guess
+  - I can try the next word
+  - I can log out
 
-## Running project
+## How To Use It
+Below is a sample use case for Spaced Repetition
 
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
+Sign Up or Log In (With appropriate error messages for each)
+Signing Up automatically takes you to the Login Page
+![Home Page](./src/images/SS1.png?raw=true "Sign Up")
+![Home Page](./src/images/SS2.png?raw=true "Log In")
 
-## Running the tests
+Home Page (Start Practicing)
+![Home Page](./src/images/SS3.png?raw=true "Home Page (Start Practicing)")
 
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
+Guess Word meaning
+![Home Page](./src/images/SS4.png?raw=true "Guess Word meaning")
 
-Cypress has the following expectations:
+Correct Response
+![Home Page](./src/images/SS5.png?raw=true "Correct Response")
 
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
+Guess Another word Meaning
+![Home Page](./src/images/SS6.png?raw=true "Guess Another word Meaning")
 
-To start the tests run the command:
+Incorrect Response (LogOut)
+![Home Page](./src/images/SS7.png?raw=true "Incorrect Response (LogOut)")
 
-```bash
-npm run cypress:open
-```
+Redirected to Log In Page
+![Home Page](./src/images/SS8.png?raw=true "Redirected to Log In Page")
 
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
 
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
-
-Tests will assert against your running localhost client application.
-
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
-
-```bash
-npm run cypress:run
-```
-
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
+## Technologies Used
+- React
+- React Router
+- React Context
+- JWT Decode
+- Cypress (Development)
+- JWT (Development)
+- Unfetch (Development)

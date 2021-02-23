@@ -16,15 +16,17 @@ class DashboardRoute extends Component {
   state = {
     language: '',
     words: [],
+    totalScore: 0,
   }
 
   componentDidMount() {
     LanguageService.fetchLanguageAndWords()
       .then((languageAndWords) => {
+        console.log(languageAndWords.language.total_score);
         this.setState({
           language: languageAndWords.language.name,
           words: languageAndWords.words,
-          totalScore: languageAndWords.language.total_score,
+          totalScore: languageAndWords.language.words[0].total_score,
         })
       })
     ;
