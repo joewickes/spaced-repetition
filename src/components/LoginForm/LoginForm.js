@@ -51,7 +51,7 @@ class LoginForm extends Component {
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
-          {error && <p>{error}</p>}
+          {error && <p style={{color: "red"}}>{error}</p>}
         </div>
         <div>
           <Input

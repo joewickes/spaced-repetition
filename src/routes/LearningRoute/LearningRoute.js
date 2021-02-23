@@ -60,18 +60,6 @@ class LearningRoute extends Component {
         word: this.state.nextWord,
         isCorrect: null
       })
-
-      // HeadService.fetchLearnWord()
-      // .then(response => {
-      //   console.log(response)
-      //   console.log(this.state);
-      //   this.setState({
-      //     word: response.nextWord,
-      //     totalScore: response.totalScore,
-      //     correctCount: response.wordCorrectCount,
-      //     incorrectCount: response.wordIncorrectCount
-      //   })
-      // }) 
     }
 
     const guessPrompt = (

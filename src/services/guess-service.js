@@ -14,7 +14,7 @@ const GuessService = {
       const fetchedObj = await fetchedResponse.json();
       return fetchedObj;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   },
 }

@@ -12,7 +12,7 @@ const LanguageService = {
       const fetchedWords = await fetchedResponse.json();
       return fetchedWords;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   },
 }
