@@ -26,7 +26,7 @@ class DashboardRoute extends Component {
         this.setState({
           language: languageAndWords.language.name,
           words: languageAndWords.words,
-          totalScore: languageAndWords.words[0].total_score,
+          totalScore: languageAndWords.language.total_score,
         })
       })
     ;
